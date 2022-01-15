@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 48px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.albums-list {
+  width: 600px;
+  list-style-type: none;
+}
+
+.albums {
+  margin-right: 50px;
+}
+
+.albums:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+.album {
+  padding-left: 25px;
+  background-color: rgb(234, 240, 247);
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: inherit;
+}
+
+.album:hover {
+  color: #17a020;
+  letter-spacing: 0.02em;
+  transition: letter-spacing 1s;
+}
+
+.album:active {
+  color: lightcoral;
+}
+
+.album:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.photos-list {
+  width: 660px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.photo:not(:last-child) {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.photo:nth-child(4n) {
+  margin-right: 0;
+}
+
+.albums-title {
+  color: #f7e5db;
+  text-shadow: 0 -1px 4px #17a020, 0 -2px 10px #0bec8a, 0 -10px 20px #0becc3, 0 -15px 20px #0c96ec;
+}
+
+.photos-title {
+  color: #f7e5db;
+  text-shadow: 0 -1px 4px #0c96ec, 0 -2px 10px #0b69ec, 0 -10px 20px #400bec, 0 -15px 20px #6517a0;
+}
+
+.album::first-letter {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 18px;
+  font-weight: 900;
+  color: #0b69ec;
+}
