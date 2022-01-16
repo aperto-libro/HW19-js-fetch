@@ -2,13 +2,12 @@ const source = 'https://jsonplaceholder.typicode.com';
 const startId = 1; // стартовый индекс для первого рендера
 let albumsList = document.querySelector('.albums-list');
 let photosList = document.querySelector('.photos-list');
-let albumName = document.querySelector('.album-name');
 
 async function getAlbumsList() {
   let listOfAlbums = await fetch(`${source}/albums`);
 
   if (listOfAlbums.ok) {
-    return await listOfAlbums.json();
+    return listOfAlbums.json();
   } else {
     console.error(error);
   }
@@ -18,7 +17,7 @@ async function getPhotosList(id = startId) {
   let photosOfAlbum = await fetch(`${source}/photos?albumId=${id}`);
 
   if (photosOfAlbum.ok) {
-    return await photosOfAlbum.json();
+    return photosOfAlbum.json();
   } else {
     console.error(error);
   }
